@@ -70,3 +70,4 @@ class chatbook:
         self.menu()
                 
 user = chatbook()
+# Creating an instance (object) of chatbook
