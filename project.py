@@ -2,6 +2,7 @@ class chatbook:
 
     def __init__(self):
         self.user_name = ""
+        self.__name = "hidden_name"
         self.password = ""
         self.loggedin = False
         self.menu()
@@ -70,4 +71,5 @@ class chatbook:
         self.menu()
                 
 user = chatbook()
+
 # Creating an instance (object) of chatbook
