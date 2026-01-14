@@ -1,11 +1,34 @@
 class chatbook:
 
+    __user_id = 0
     def __init__(self):
+
+        self.id = chatbook.__user_id
+        # print(f"Unique ID assigned: {self.id}")
+        chatbook.__user_id += 1
         self.user_name = ""
         self.__name = "hidden_name"
         self.password = ""
+        self.user_id = 0
+        self.user_id += 1
         self.loggedin = False
-        self.menu()
+        # self.menu()
+    
+    ## no need to use object reference 'self' for static methods
+    @staticmethod
+    def get_id():
+        return chatbook.__user_id
+    
+    @staticmethod
+    def set_id(value):
+        chatbook.__user_id = value
+
+
+    def get_name(self):
+        return self.__name
+    
+    def set_name(self,value):
+        self.__name = value
 
     def menu(self):
         user_input = input("""Welcome to Chatbook !! How would you like to proceed?
